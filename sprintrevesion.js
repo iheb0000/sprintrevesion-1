@@ -118,10 +118,10 @@ function rangeFor (min , max) {
 }
 function addDigits(number):
     sum = 0
-    while( number > 0)
-        somme += number % 10
-        number //= 10
-    return sum
+    while( number > 0){
+        somme += number % 10 
+       
+    return sum }
 function addDigits(number) {
   let sum = 0;
   let numStr = number.toString();
@@ -138,3 +138,146 @@ function addDigits(num) {
     }
     return add
 }
+function fibRecursive(number) {
+    if (number===0){
+        return 1
+    }
+    if(number===1){
+        return 1
+    }
+    return fibRecursive(number-1)+fibRecursive(number-2)
+
+}
+
+
+
+function firstDigit(str) {
+    for (var i=0 ; i<str.length ; i++){
+        if (str[i]>=0 && str[i]<=9){
+            return str[i]
+        }
+    } 
+}
+
+function firstDigitWithWhile(str) {
+    var i=0
+    while ( i<str.length ){
+        if (str[i]>=0 && str[i]<=9){
+            return str[i]
+        }
+         i++
+    } 
+}
+
+
+
+function remove(arr, el) {
+    var res= []
+ 
+     for (var i=0 ; i<arr.length ; i++){
+         if(arr[i] !== el){
+            res.push(arr[i]) 
+         }
+     }
+     return res
+ }
+
+ or 
+
+ function remove(arr, el) {
+
+    for (var i=0 ; i<arr.length ; i++){
+        if(arr[i] === el){
+           arr.splice(i,1) 
+        }
+    }
+    return arr
+}
+
+
+
+ function averageWithFor (arr) {
+    var ave = 0 
+    for (var i=0 ; i<arr.length ; i++){
+        ave+= arr[i]/arr.length
+    }
+    return ave
+}
+ recursion
+
+function ave (arr) {
+    if (arr.length===0){
+        return 0
+    }
+    else (arr.length===1){
+        return arr[0]
+    }
+
+    return (arr[0]+ave(arr.slice(1)) ) / arr.length
+}
+
+
+function findMax(str) {
+    var max=str[0]
+    for (var i=1 ; i<str.length ; i++){
+        if(str[i]>max){
+            max=str[i]
+        }
+    }
+    return max
+}
+
+function findMax(str) {
+    var max=str[0]
+    var i=1
+    while ( i<str.length  ){
+        if(str[i]>max){
+            max=str[i]
+        }
+        i++
+    }
+    return max
+}
+
+
+
+
+
+function evenDigits(str) {
+    for (var i = 0; i < str.length; i++) {
+        if (parseInt(str[i]) % 2 !== 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+ recursion
+
+function even (str){
+    if (str.length===0) {
+        return true
+    }
+
+    if(parseInt(str[0]) %2 !== 0 ){
+        return false
+    }
+    return even (str.slice(1))
+}
+
+
+function palindrom(str) {
+    var reversed=""
+
+    for (var i=str.length-1 ; i>=0 ; i--){
+         reversed+=str[i]
+    }
+    if (str===reversed) {
+       return true 
+    }
+    return false 
+}
+
+
+
+16 / 17 not found 
